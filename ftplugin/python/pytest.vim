@@ -1311,10 +1311,6 @@ endfunction
 
 function! s:Proxy(action, ...)
     call s:SetExecutable()
-    if (executable(g:pytest_executable . "") == 0)
-        call s:Echo(g:pytest_executable . " not found. This plugin needs py.test installed and accessible")
-        return
-    endif
 
     " Some defaults
     let verbose = 0
